@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jessie
+* source:	https://sketchfab.com/3d-models/jessie-571bd5f040b646249a7bc014aae46136
+* author:	JennyfanMeetTheRobinsonGame (https://sketchfab.com/jennyconteras75)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jessie" (https://sketchfab.com/3d-models/jessie-571bd5f040b646249a7bc014aae46136) by JennyfanMeetTheRobinsonGame (https://sketchfab.com/jennyconteras75) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

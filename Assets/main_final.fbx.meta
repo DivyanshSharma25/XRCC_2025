@@ -1,0 +1,697 @@
+fileFormatVersion: 2
+guid: 23326a07f6663c24b92fd519385ab47d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 10_Albedo
+    second: {fileID: 2800000, guid: 6ab3929506fa68e47b0c11ce9751d406, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 10_Normal
+    second: {fileID: 2800000, guid: a51a8eed6c53f804c91a4c9349a25540, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 10_Roughness
+    second: {fileID: 2800000, guid: 81ded24d0f35aeb4f89cf1f665312d19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 1_Albedo
+    second: {fileID: 2800000, guid: f8fe9c46a37257746a1c30863fb955eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 1_Normal
+    second: {fileID: 2800000, guid: ee790dbae5bf97347b2ef24b92e0917b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 1_Roughness
+    second: {fileID: 2800000, guid: f3efcdfb93798d5488c1afb686f0aa42, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 2_Albedo
+    second: {fileID: 2800000, guid: 5ac2933b8f202ec49a44fe72e1cfd7b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 2_Normal
+    second: {fileID: 2800000, guid: ed275607e2bfc92408b34c8cfe07f8c5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 2_Roughness
+    second: {fileID: 2800000, guid: 0d303624c0ea298439ce568c1fcff80c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 3_Albedo
+    second: {fileID: 2800000, guid: d556794e59e4c554ca0fd7cc069b2a0e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 3_Normal
+    second: {fileID: 2800000, guid: 84b4eef666f51c24ab45727a0861ca8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 3_Roughness
+    second: {fileID: 2800000, guid: 4db857e706fcc0e43891aad84b2d91ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 4_Albedo
+    second: {fileID: 2800000, guid: d130ce3215e67ea4f970ef9ffb314fa5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 4_Normal
+    second: {fileID: 2800000, guid: c2e4fb7e05da2534cb4180a5ee47a564, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 4_Roughness
+    second: {fileID: 2800000, guid: daeed54676769cb46bbdfb6e036689c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5_Albedo
+    second: {fileID: 2800000, guid: 3a1fd5e52ee2ba044ba7db50a1e7a47b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5_Normal
+    second: {fileID: 2800000, guid: 7300a479d0f62c6429118392f0cb4158, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5_Roughness
+    second: {fileID: 2800000, guid: c52ef9dec92aea445bdaff20f2ea09ba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 6_Albedo
+    second: {fileID: 2800000, guid: 05e487a9a2cbc884c854827938cffd10, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 6_Normal
+    second: {fileID: 2800000, guid: ccfcb58a9856db0469f5481576b93392, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 6_Roughness
+    second: {fileID: 2800000, guid: 4cf00308a466a704582ccca437b2ef0f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7_Albedo
+    second: {fileID: 2800000, guid: 73afb1f1f64667c44946721248a31525, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7_Normal
+    second: {fileID: 2800000, guid: 649179eef47cbe9439e983679cf64ceb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7_Roughness
+    second: {fileID: 2800000, guid: 51c4190e225e3144386f08ba4c59e4db, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8_Albedo
+    second: {fileID: 2800000, guid: 0d6d90a873328174baacdea3ac1788f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8_Normal
+    second: {fileID: 2800000, guid: b15f070aa9828384b904f3815fbf2f11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8_Roughness
+    second: {fileID: 2800000, guid: e1dab73e27cd10e4db82fae8eefd996f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9_Albedo
+    second: {fileID: 2800000, guid: cf78da6c46eec6d46b8016a39653ddd4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9_Normal
+    second: {fileID: 2800000, guid: 50e89e091672684489e6f758278977ed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9_Roughness
+    second: {fileID: 2800000, guid: 4e7593dcba7d1db40b203b30f06d49dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: A_Albedo
+    second: {fileID: 2800000, guid: 766647a8a7f246a4c89f775d40e5b599, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: A_Normal
+    second: {fileID: 2800000, guid: dfd56d5cfe05f5f4e8d1fd6018c94a02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: A_Roughness
+    second: {fileID: 2800000, guid: db31b9ffcd615ab40b3cc01ed7d3056c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: B_Albedo
+    second: {fileID: 2800000, guid: c1df50ed9b4a3b8428b0e458a8e7023b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: B_Normal
+    second: {fileID: 2800000, guid: ee0fe79e921f53b42a463ef3b4232711, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: B_Roughness
+    second: {fileID: 2800000, guid: 2a71223ed0c36a241a99b16c0a17420b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C_Albedo
+    second: {fileID: 2800000, guid: ff78cdd747edbd34a9d4d73ae7cdb972, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C_Normal
+    second: {fileID: 2800000, guid: 1153a994a8f149249befc13704b51cb1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C_Roughness
+    second: {fileID: 2800000, guid: 67d7273c0329edf43a5861bee1e4d852, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: D_Albedo
+    second: {fileID: 2800000, guid: 66487da93fa424c4a827bdb94819e268, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: D_Normal
+    second: {fileID: 2800000, guid: f467510781e076e4aa1ec454f09136fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: D_Roughness
+    second: {fileID: 2800000, guid: 7ee35be6d268a4c4589a2bdd0d4a3485, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: E_Albedo
+    second: {fileID: 2800000, guid: 35087350ba3e6744ea6f3bc254e407b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: E_Normal
+    second: {fileID: 2800000, guid: 8c4277cf3e818f04080befe203a0f050, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: E_Roughness
+    second: {fileID: 2800000, guid: 5b30ef7a5b7d5114fb96581229ec3045, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: F_Albedo
+    second: {fileID: 2800000, guid: b6de28de26ddbd04796e68078151afc5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: F_Normal
+    second: {fileID: 2800000, guid: 17519799994eb0d4290c1c9ecec6ae6c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: F_Roughness
+    second: {fileID: 2800000, guid: 5be401ee9996fbf4eba05d2f86b97432, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Funny Squishy Yellow Toy Chicken_Diffuse
+    second: {fileID: 2800000, guid: 907e8ebca78a8f54da36fab638735da9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Funny Squishy Yellow Toy Chicken_Normal
+    second: {fileID: 2800000, guid: 9af31446d7e602d40ba427e03145f116, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Funny Squishy Yellow Toy Chicken_Roughness
+    second: {fileID: 2800000, guid: aaa3152cf42de4b4d81a216774173289, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: G_Albedo
+    second: {fileID: 2800000, guid: 47d65ac4c6a3f9144b0bcec4fe643cb4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: G_Normal
+    second: {fileID: 2800000, guid: ef7f6be168296e44799a6b2a3c26e0d0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: G_Roughness
+    second: {fileID: 2800000, guid: dbc6b5bfd2c90d740859c05fae3fc917, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: H_Albedo
+    second: {fileID: 2800000, guid: 3812d6db8c3cd0942a5be59331cbf09d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: H_Normal
+    second: {fileID: 2800000, guid: 87a4c2fafa7b7574abca82eca27c5796, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: H_Roughness
+    second: {fileID: 2800000, guid: 8c602f4c1af8fb248b9d54a76652aee0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: I_Albedo
+    second: {fileID: 2800000, guid: b8d50e652b437bc409a50f5b8b5962f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: I_Normal
+    second: {fileID: 2800000, guid: d42d73f3f3b2e104193b299d4bb13bf9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: I_Roughness
+    second: {fileID: 2800000, guid: cb82f4400133e9c4bb82c93e9b282fa0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: J_Albedo
+    second: {fileID: 2800000, guid: 7b086517f0f48e84bb119e55d0e2c9d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: J_Normal
+    second: {fileID: 2800000, guid: 9751b9d1746d6da4ab5db872acd1d614, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: J_Roughness
+    second: {fileID: 2800000, guid: 49293a59c0deb8e4183ace20bb3ef0f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: K_Albedo
+    second: {fileID: 2800000, guid: 6e993f131d85516479a14911b19d1685, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: K_Normal
+    second: {fileID: 2800000, guid: af60e4f20971a7346b273d0bb57e1219, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: K_Roughness
+    second: {fileID: 2800000, guid: c56723721388ad442a06a1ba107cbe3b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: L_Albedo
+    second: {fileID: 2800000, guid: eee688016015b534fb8e304228d1040a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: L_Normal
+    second: {fileID: 2800000, guid: a744253455f2c034cae30bff9c4d0e27, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: L_Roughness
+    second: {fileID: 2800000, guid: f6eeb04a3ac0cc247ad015719f0e4f13, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Albedo
+    second: {fileID: 2800000, guid: 6e8fda40a213f16408d5fd064007f817, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Normal
+    second: {fileID: 2800000, guid: d70b51467f11dc44bb20ad294da49e35, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Roughness
+    second: {fileID: 2800000, guid: 087a16fa22caef4468062db0ca0c6657, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: N_Albedo
+    second: {fileID: 2800000, guid: 159c7ec2e417a3c4a9b1774cf19186be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: N_Normal
+    second: {fileID: 2800000, guid: c2d8f05d8e7755a4d998ebb43acd5044, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: N_Roughness
+    second: {fileID: 2800000, guid: de234c2c28c2af14fa803d419d6f3e99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: O_Albedo
+    second: {fileID: 2800000, guid: 95e7456330895514698f6a002a418635, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: O_Normal
+    second: {fileID: 2800000, guid: 9f636869a47645a4a9d51c01ebb45e41, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: O_Roughness
+    second: {fileID: 2800000, guid: 8d8f876f21a6a854f9a16ae4b8948e67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: P_Albedo
+    second: {fileID: 2800000, guid: 355be015732f15c4d8d29c924be64980, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: P_Normal
+    second: {fileID: 2800000, guid: cb5533154faf7aa4e8779309525bc96a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: P_Roughness
+    second: {fileID: 2800000, guid: d8a9ee776ce994644af44a9111c502a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Q_Albedo
+    second: {fileID: 2800000, guid: d2a70a2c0e806964ea47f8c2fabad176, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Q_Normal
+    second: {fileID: 2800000, guid: 9ca3f371381d6b94da6cb784c15f2f86, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Q_Roughness
+    second: {fileID: 2800000, guid: 212377badae872943913ee8edc490002, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: R_Albedo
+    second: {fileID: 2800000, guid: 4523ddc01b7524746a15ba5ed7340cb6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: R_Normal
+    second: {fileID: 2800000, guid: 04aa4efbe84fd934cbdc344f06ffe875, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: R_Roughness
+    second: {fileID: 2800000, guid: e74b1bc1814288048b52ac5c5ff37749, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: S_Albedo
+    second: {fileID: 2800000, guid: 79482b29a0ed659478ea5818e0ae5e09, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: S_Normal
+    second: {fileID: 2800000, guid: 5042cc575bf75ab49b48a52f14f16e8c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: S_Roughness
+    second: {fileID: 2800000, guid: 0d27e2f92c316c5449c2ca7d084b4b62, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Albedo
+    second: {fileID: 2800000, guid: 35f8c40c590079c4c9e68073b79938af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Normal
+    second: {fileID: 2800000, guid: 6f07dd8eae8f5f247bf7e7a380e660fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Roughness
+    second: {fileID: 2800000, guid: 7a684018bda635f449fe971ef4a03850, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: U_Albedo
+    second: {fileID: 2800000, guid: 8e05bef3eb637c54085e4c793b717ece, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: U_Normal
+    second: {fileID: 2800000, guid: cc8e1f7131b3164478fb19c1957fac04, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: U_Roughness
+    second: {fileID: 2800000, guid: c2d902689b935984b94afbf2112802e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: V_Albedo
+    second: {fileID: 2800000, guid: 95bc1b019fc56e649bd6f6636ca3ae99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: V_Normal
+    second: {fileID: 2800000, guid: 3803ffa3a3451b14792634e56ca4f791, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: V_Roughness
+    second: {fileID: 2800000, guid: 3daf2b662cf423943a2968acbc9011f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: W_Albedo
+    second: {fileID: 2800000, guid: e94620c6756f9cb4c86eb55847bcce8e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: W_Roughness
+    second: {fileID: 2800000, guid: e850ed740e1c2e449818d47765090ae3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: W_normal
+    second: {fileID: 2800000, guid: 8f37ff470c9746748b96cf3150c560cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: X_Albedo
+    second: {fileID: 2800000, guid: 1ff8ed19db1c1874290e31fa3444c906, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: X_Normal
+    second: {fileID: 2800000, guid: ad9a557387c76f14094daa95c9648acd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: X_Roughness
+    second: {fileID: 2800000, guid: 05ba358818fdb594695319f23c46f690, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Y_Albedo
+    second: {fileID: 2800000, guid: a1be2f769860e444696bac97ec3c5348, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Y_Roughness
+    second: {fileID: 2800000, guid: 2d38da01e617a1243b487bc1552aa05d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Y_normal
+    second: {fileID: 2800000, guid: 92c64140459cc0840a98c2eeca090e8b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Z_Albedo
+    second: {fileID: 2800000, guid: 5386efb97fef79e4d97c35ba485c3e1c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Z_Normal
+    second: {fileID: 2800000, guid: cf772a3a4e2bfd14390cbbba93a05239, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Z_Roughness
+    second: {fileID: 2800000, guid: 2939fb246611f814395f12b7a5401197, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ays_b
+    second: {fileID: 2800000, guid: 8d458cedffbf62741ab206c601aa0a0f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: basketball-court-layout-top-view-vector-40804572
+    second: {fileID: 2800000, guid: b6307f1b84d5748448663a7936094f1f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: carcassonne01
+    second: {fileID: 2800000, guid: f6d4078f6b94f454c839a13efb6bf8f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: download
+    second: {fileID: 2800000, guid: c02acb07dd034c54589f08444ec027d4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grud_2_b
+    second: {fileID: 2800000, guid: b7b64771c36731d4c8979d3990b3e4d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: welcomemask
+    second: {fileID: 2800000, guid: 234196dfb53805341b5b713a94927919, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wire_143224087_Base_Color
+    second: {fileID: 2800000, guid: 5a3ab28938af98b4fb1b7d968cb8483d, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

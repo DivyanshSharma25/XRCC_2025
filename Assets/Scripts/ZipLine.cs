@@ -7,7 +7,12 @@ public class ZipLine : MonoBehaviour
 {
     [Header("Input")]
     [SerializeField]
-    private InputActionReference interactAction;
+    [Tooltip("Primary input action to start the zipline (e.g. Grab)")]
+    private InputActionReference primaryAction;
+
+    [SerializeField]
+    [Tooltip("Secondary/alternate input action that also starts the zipline")]
+    private InputActionReference secondaryAction;
     [Header("Zipline Settings")]
     [Tooltip("The other end point of the zipline")]
     public Transform otherEnd;
@@ -39,18 +44,20 @@ public class ZipLine : MonoBehaviour
 
     private void OnEnable()
     {
-        if (interactAction != null && interactAction.action != null)
-        {
-            interactAction.action.performed += OnInteractPerformed;
-        }
+        if (primaryAction != null && primaryAction.action != null)
+            primaryAction.action.performed += OnAnyStartPerformed;
+
+        if (secondaryAction != null && secondaryAction.action != null)
+            secondaryAction.action.performed += OnAnyStartPerformed;
     }
 
     private void OnDisable()
     {
-        if (interactAction != null && interactAction.action != null)
-        {
-            interactAction.action.performed -= OnInteractPerformed;
-        }
+        if (primaryAction != null && primaryAction.action != null)
+            primaryAction.action.performed -= OnAnyStartPerformed;
+
+        if (secondaryAction != null && secondaryAction.action != null)
+            secondaryAction.action.performed -= OnAnyStartPerformed;
     }
 
     private void Start()
@@ -61,7 +68,7 @@ public class ZipLine : MonoBehaviour
         triggerArea.size = triggerSize;
     }
 
-    private void OnInteractPerformed(InputAction.CallbackContext context)
+    private void OnAnyStartPerformed(InputAction.CallbackContext context)
     {
         if (playerInTrigger && !isZiplining)
         {

@@ -3374,7 +3374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 5
   m_Handedness: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
@@ -4978,7 +4978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 3
   m_Handedness: 1
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
@@ -6121,7 +6121,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 7010712511335694460}
   m_CameraFloorOffsetObject: {fileID: 4292439935620289418}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 1.18
+  m_CameraYOffset: 1.32
 --- !u!143 &6643250804337445618
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7838,7 +7838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackingType: 1
+  m_TrackingType: 0
   m_UpdateType: 0
   m_IgnoreTrackingState: 0
   m_PositionInput:

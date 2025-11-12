@@ -3844,8 +3844,8 @@ MonoBehaviour:
   _Editor_EnsureCount: 0
   _Editor_OnValidateTrigger: 1
   _EditorAllowAutoUpdateFeetParams: 1
-  _EditorCategory: 1
-  _EditorSetupCategory: 2
+  _EditorCategory: 0
+  _EditorSetupCategory: 1
   _EditorMotionCategory: 1
   _EditorExtraCategory: 2
   IKHintMode: 0
@@ -3865,7 +3865,7 @@ MonoBehaviour:
   FadeOffAtDistance: 0
   GroundMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   RaycastHitTrigger: 1
   CastDistance: 1
   RaycastStartHeight: 0

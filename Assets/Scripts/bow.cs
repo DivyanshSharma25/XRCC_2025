@@ -62,8 +62,7 @@ public class Bow_Simple : MonoBehaviour
             isLoaded = false;
             if (trajectoryRenderer != null)
                 trajectoryRenderer.Hide();
-            if (currentArrow != null)
-                Destroy(currentArrow);
+            
         }
     }
 
@@ -91,8 +90,8 @@ public class Bow_Simple : MonoBehaviour
 
     private void LoadArrow()
     {
-        Vector3 spawnPosition = nockPoint.position + (nockPoint.forward * 0.5f);
-        Quaternion arrowRotation = nockPoint.rotation * Quaternion.Euler(0, 90, 0);
+        Vector3 spawnPosition = nockPoint.position-(nockPoint.forward*0.1f);
+        Quaternion arrowRotation = nockPoint.rotation * Quaternion.Euler(0, 0, 0);
         currentArrow = Instantiate(arrowPrefab, spawnPosition, arrowRotation);
 
         currentArrow.transform.SetParent(nockPoint);

@@ -59,9 +59,8 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        if (scoreText != null)
-        {
+        
             Debug.Log("score: " + score);
-        }
+        
     }
 }

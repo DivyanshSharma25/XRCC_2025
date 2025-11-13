@@ -1,113 +1,153 @@
-using System.Collections; // Required for Coroutines
-using Unity.Mathematics; // Required for float3, etc.
+using System.Collections; // Required
+using Unity.Mathematics; // Required
 using UnityEngine;
-using UnityEngine.Splines; // Required for using splines
-using UnityEngine.XR.Interaction.Toolkit; // Required for VR
+using UnityEngine.Splines; // Required
+using UnityEngine.XR.Interaction.Toolkit; // Required
 
-[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
-public class CarPathFollower : MonoBehaviour
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable))]
+[RequireComponent(typeof(Rigidbody))] // <-- Now required
+public class SplineCar : MonoBehaviour
 {
-    [Header("Path to Follow")]
-    [Tooltip("The SplineContainer object that defines the path for the car.")]
+    [Header("Path (MUST ASSIGN)")]
+    [Tooltip("The SplineContainer object that defines the path.")]
     public SplineContainer path;
 
     [Header("References (MUST ASSIGN)")]
-    [Tooltip("The main 'XR Origin' or 'XR Rig' object that represents the player")]
+    [Tooltip("The main 'XR Origin' or 'XR Rig' object for the player.")]
     public GameObject playerRig;
+    [Tooltip("An empty object inside the car where the player should sit.")]
+    public Transform playerSeat;
 
     [Header("Movement Settings")]
     [Tooltip("How fast the car moves along the path (in meters per second).")]
-    public float speed = 5.0f;
+    public float speed = 10.0f;
+
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable interactable;
+    private bool isAtStart = true;
+    private bool isMoving = false;
 
     // --- THIS IS THE FIX ---
-    // Changed 't' from 'double' to 'float' to match the Spline.Evaluate method
-    private float t = 0.0f;
-    // -----------------------
-
-    private bool isMoving = false;
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable carInteractable;
-    private UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor playerHand = null;
+    private Rigidbody rb; // Add a reference for the Rigidbody
+    private CharacterController playerCharacterController;
+    private ContinuousMoveProviderBase moveProvider;
+    private UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider teleportProvider;
+    // --- END FIX ---
 
     void Awake()
     {
-        // Get the grabbable component on this car
-        carInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>();
+        rb = GetComponent<Rigidbody>(); // <-- Get the Rigidbody
 
-        // Subscribe to the grab event
-        carInteractable.selectEntered.AddListener(StartRide);
+        if (playerRig != null)
+        {
+            playerCharacterController = playerRig.GetComponent<CharacterController>();
+            moveProvider = playerRig.GetComponent<ContinuousMoveProviderBase>();
+            teleportProvider = playerRig.GetComponent<UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider>();
+        }
+    }
+
+    void Start()
+    {
+        interactable.selectEntered.AddListener(ToggleRide);
+
+        if (path != null)
+        {
+            path.Spline.Evaluate(0.0f, out float3 localPos, out float3 localForward, out float3 localUp);
+            transform.position = path.transform.TransformPoint(localPos);
+            transform.rotation = Quaternion.LookRotation(path.transform.TransformDirection(localForward), path.transform.TransformDirection(localUp));
+
+            // --- THIS IS THE FIX ---
+            // Disable physics when parked at the start
+            if (rb != null)
+                rb.isKinematic = true;
+            // --- END FIX ---
+        }
     }
 
     void OnDestroy()
     {
-        carInteractable.selectEntered.RemoveListener(StartRide);
+        interactable.selectEntered.RemoveListener(ToggleRide);
     }
 
-    /// <summary>
-    /// Called when the player grabs the car.
-    /// </summary>
-    private void StartRide(SelectEnterEventArgs args)
+    private void ToggleRide(SelectEnterEventArgs args)
     {
-        // Don't start if we're already moving
         if (isMoving) return;
 
-        // Store the player's hand
-        playerHand = args.interactorObject;
+        // --- THIS IS THE FIX ---
+        // Enable physics for the ride
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = false; // Make sure it doesn't fall off the spline
+        }
+        // --- END FIX ---
 
-        // Start the movement
-        StartCoroutine(MoveAlongPath());
+        if (playerCharacterController != null)
+            playerCharacterController.enabled = false;
+        if (moveProvider != null)
+            moveProvider.enabled = false;
+        if (teleportProvider != null)
+            teleportProvider.enabled = false;
+
+        playerRig.transform.SetParent(playerSeat);
+        playerRig.transform.localPosition = Vector3.zero;
+        playerRig.transform.localRotation = Quaternion.identity;
+
+        float targetT = isAtStart ? 1.0f : 0.0f;
+        StartCoroutine(MoveAlongPath(targetT));
     }
 
-    /// <summary>
-    /// Moves both the car and the player along the spline path.
-    /// </summary>
-    private IEnumerator MoveAlongPath()
+    private IEnumerator MoveAlongPath(float targetT)
     {
         isMoving = true;
-        t = 0.0f; // Start from the beginning
+        float currentT = isAtStart ? 0.0f : 1.0f;
 
-        // Loop until we reach the end of the path (t = 1.0)
-        while (t < 1.0f) // <-- Also change here
+        while (Mathf.Abs(targetT - currentT) > 0.001f)
         {
-            // 1. Get the total length of the spline path
             float pathLength = path.Spline.GetLength();
+            float step = (speed * Time.deltaTime) / pathLength;
+            currentT = Mathf.MoveTowards(currentT, targetT, step);
 
-            // 2. Calculate how far to move this frame
-            float distanceThisFrame = speed * Time.deltaTime;
+            path.Spline.Evaluate(currentT, out float3 localPos, out float3 localForward, out float3 localUp);
 
-            // 3. Update our progress 't' (a value from 0 to 1)
-            t += (distanceThisFrame / pathLength);
+            // --- THIS IS THE FIX ---
+            // Move the car using the Rigidbody for smooth, physics-safe movement
+            Vector3 newWorldPos = path.transform.TransformPoint(localPos);
+            Quaternion newWorldRot = Quaternion.LookRotation(path.transform.TransformDirection(localForward), path.transform.TransformDirection(localUp));
 
-            // 4. Get the new position and rotation from the spline
-            //    This function now correctly receives a 'float'
-            path.Spline.Evaluate(t, out float3 pos, out float3 forward, out float3 up);
+            rb.MovePosition(newWorldPos);
+            rb.MoveRotation(newWorldRot);
+            // --- END FIX ---
 
-            // 5. Apply the position and rotation to the CAR
-            transform.position = pos;
-            transform.rotation = Quaternion.LookRotation(forward, up);
-
-            // 6. Apply the position and rotation to the PLAYER RIG
-            playerRig.transform.position = pos;
-            playerRig.transform.rotation = Quaternion.LookRotation(forward, up);
-
-            yield return null; // Wait for the next frame
+            yield return null;
         }
 
         // --- Ride is Over ---
 
-        // 7. Snap to the final position
-        path.Spline.Evaluate(1.0f, out float3 endPos, out float3 endForward, out float3 endUp); // <-- Also change here
-        transform.position = endPos;
-        transform.rotation = Quaternion.LookRotation(endForward, endUp);
-        playerRig.transform.position = endPos;
-        playerRig.transform.rotation = Quaternion.LookRotation(endForward, endUp);
+        // Snap to final position
+        path.Spline.Evaluate(targetT, out float3 endLocalPos, out float3 endLocalFwd, out float3 endLocalUp);
+        rb.MovePosition(path.transform.TransformPoint(endLocalPos));
+        rb.MoveRotation(Quaternion.LookRotation(path.transform.TransformDirection(endLocalFwd), path.transform.TransformDirection(endLocalUp)));
 
-        // 8. Force the player's hand to let go of the car
-        if (playerHand != null)
+        // --- THIS IS THE FIX ---
+        // Disable physics now that we are parked at the end
+        if (rb != null)
         {
-            carInteractable.interactionManager.SelectExit(playerHand, carInteractable);
+            rb.isKinematic = true;
+            rb.useGravity = true; // Reset gravity to its default
         }
+        // --- END FIX ---
 
+        playerRig.transform.SetParent(null);
+
+        if (playerCharacterController != null)
+            playerCharacterController.enabled = true;
+        if (moveProvider != null)
+            moveProvider.enabled = true;
+        if (teleportProvider != null)
+            teleportProvider.enabled = true;
+
+        isAtStart = !isAtStart;
         isMoving = false;
-        playerHand = null;
     }
 }

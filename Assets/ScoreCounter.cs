@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     [Header("Scoring")]
     [Tooltip("The UI Text element to display the score")]
-    public TextMeshProUGUI scoreText;
+    public TextMeshPro scoreText;
 
     [Tooltip("The tag assigned to your basketball prefab")]
     public string ballTag = "Basketball";
@@ -59,8 +59,11 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        
-            Debug.Log("score: " + score);
-        
+        if (scoreText != null)
+        {
+            scoreText.text = score.ToString();
+        }
+        Debug.Log("score: " + score);
+
     }
 }

@@ -14,6 +14,7 @@ public class NetworkPlayer : MonoBehaviourPun
     /// <summary>True if this PhotonView belongs to the local player.</summary>
     public bool IsLocalPlayer { get; private set; }
 
+    public GameObject playerHead;
     private void Awake()
     {
         // Cache components (including inactive children)
@@ -43,6 +44,10 @@ public class NetworkPlayer : MonoBehaviourPun
     /// </summary>
     private void ApplyLocalityRules()
     {
+        if (IsLocalPlayer)
+        {
+            playerHead.SetActive(false);
+        }
         // IK follow
         if (IkTargetFollow != null)
         {

@@ -31,8 +31,5 @@ public class Arrow : MonoBehaviour
         rb.useGravity = false;
         transform.SetParent(collision.transform); // Stick
     }
-    private void Update()
-    {
-        Debug.Log(rb.linearVelocity);
-    }
+
 }

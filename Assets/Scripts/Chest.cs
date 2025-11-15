@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Chest : MonoBehaviour
 {
@@ -6,16 +8,18 @@ public class Chest : MonoBehaviour
     [SerializeField]
     [Tooltip("The closed chest model")]
     public GameObject closedChestModel;
-
+    public bool jumpscare = false;
     [SerializeField]
     [Tooltip("The opened chest model")]
     public GameObject openedChestModel;
-
+    public AudioSource jump_scare_audio;
     [SerializeField]
     [Tooltip("Tag or name to identify the key object")]
     private string keyTag = "Key";
 
     private bool isOpen = false;
+
+    string curent_key;
 
     private void Start()
     {
@@ -86,11 +90,30 @@ public class Chest : MonoBehaviour
     /// </summary>
     public void ToggleChest()
     {
-        if (isOpen)
-            CloseChest();
-        else
-            OpenChest();
+        if (curent_key == keyTag)
+        {
+            {
+                if (isOpen)
+                    CloseChest();
+                else
+                    OpenChest();
+                if (jumpscare)
+                {
+                    jump_scare_audio.Play();
+                }
+            }
+        }
+
     }
 
     public bool IsOpen => isOpen;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        curent_key = other.gameObject.name;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        curent_key = "";
+    }
 }

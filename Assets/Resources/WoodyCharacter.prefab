@@ -673,7 +673,7 @@ Transform:
   m_GameObject: {fileID: 250352082232113202}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.40711468, y: 1.3618712, z: 0.0016528437}
+  m_LocalPosition: {x: 0.40711468, y: 1.219, z: 0.281}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2441,7 +2441,7 @@ Transform:
   m_GameObject: {fileID: 988434677624319683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.40619498, y: 1.3618722, z: -0.0025267233}
+  m_LocalPosition: {x: -0.40619498, y: 1.219001, z: 0.27681628}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4381,7 +4381,7 @@ Transform:
   m_GameObject: {fileID: 2090947345243189882}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000004582476, y: 8.731166e-11, z: 0.0000000011350496, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.71, z: 0.19}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4410,7 +4410,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6603684873039070066, guid: 221cbdbecb8ebf245bca3ac6af0ccdbb, type: 3}
+  - {fileID: 2100000, guid: 1475bb2a2e5f6754d8317cd68a8a4976, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4506,7 +4506,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 774923239625850714}
   m_AABB:
     m_Center: {x: 0.8302258, y: 0.22086506, z: 0.022123195}
-    m_Extent: {x: 0.16935447, y: 0.064801976, z: 0.09894109}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &2094960362678478054
 GameObject:
@@ -16848,7 +16848,7 @@ Transform:
   m_GameObject: {fileID: 7702528764807897354}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000004582476, y: 8.731166e-11, z: 0.0000000011350496, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7099999, z: 0.18999958}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16973,7 +16973,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 774923239625850714}
   m_AABB:
     m_Center: {x: -0.83588934, y: 0.21624789, z: 0.02276998}
-    m_Extent: {x: 0.16550207, y: 0.0725117, z: 0.10163131}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &7755888033440944508
 GameObject:
